@@ -1,0 +1,73 @@
+.tabs {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.tab {
+  flex: 1;
+  min-height: 44px;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  font-weight: var(--fw-bold);
+}
+
+.tabOn {
+  border-color: var(--color-navy-800);
+  background: var(--color-navy-800);
+  color: var(--text-on-dark);
+}
+
+.price {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.visual {
+  display: grid;
+  place-items: center;
+  min-height: 52px;
+}
+
+.trailDots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.trailDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.levelHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+.actionsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+}
+
+.stat {
+  color: var(--color-ink-600);
+  font-size: var(--fs-sm);
+}
+
+.centerMessage {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-5);
+  color: var(--text-on-dark);
+  text-align: center;
+}

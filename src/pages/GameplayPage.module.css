@@ -1,0 +1,129 @@
+.root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-navy-900);
+  color: var(--text-on-dark);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  padding-top: calc(var(--sp-3) + env(safe-area-inset-top));
+  background: var(--color-navy-800);
+}
+
+.iconBtn {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-blue-500);
+  color: var(--color-white);
+}
+
+.iconBtnDark {
+  background: var(--color-navy-600);
+}
+
+.levelName {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  white-space: nowrap;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.board {
+  position: relative;
+  flex: 0 0 38%;
+  min-height: 190px;
+  overflow: hidden;
+  background: #3d93d4;
+}
+
+.boardInner {
+  position: absolute;
+  inset: 0;
+}
+
+.boardInner canvas {
+  display: block;
+  touch-action: none;
+}
+
+.panel {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--sp-4);
+  background: var(--color-navy-700);
+}
+
+@media (min-width: 768px) {
+  .main {
+    flex-direction: row;
+  }
+
+  .board {
+    flex: 1;
+  }
+
+  .panel {
+    flex: 0 0 300px;
+  }
+}
+
+.status {
+  margin-top: var(--sp-4);
+  color: var(--text-muted-dark);
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+}
+
+.statusError {
+  color: var(--color-orange-500);
+  font-weight: var(--fw-bold);
+}
+
+.hint {
+  margin-top: var(--sp-2);
+  color: var(--text-muted-dark);
+  font-size: var(--fs-xs);
+}
+
+.bar {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4);
+  padding-bottom: calc(var(--sp-3) + env(safe-area-inset-bottom));
+  background: var(--color-navy-800);
+}
+
+.bar button {
+  min-width: 0;
+  padding: 0 var(--sp-2);
+  font-size: var(--fs-sm);
+}
+
+@media (max-width: 480px) {
+  .bar button span:last-child {
+    font-size: var(--fs-xs);
+  }
+}

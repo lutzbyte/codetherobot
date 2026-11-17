@@ -1,0 +1,28 @@
+.wrap {
+  display: grid;
+  justify-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-8) var(--sp-4);
+  text-align: center;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--color-navy-800);
+  color: var(--color-yellow-500);
+}
+
+.title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-black);
+}
+
+.hint {
+  max-width: 36ch;
+  color: var(--color-ink-600);
+  line-height: 1.5;
+}

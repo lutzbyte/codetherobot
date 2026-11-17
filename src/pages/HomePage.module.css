@@ -1,0 +1,154 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: #dbe9ff;
+  box-shadow: var(--shadow-card);
+}
+
+.sceneWrap {
+  position: relative;
+  height: 230px;
+  order: -1;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.robot {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 150px;
+  height: auto;
+  transform: translateX(-50%);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: var(--sp-5);
+}
+
+.title {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-black);
+  line-height: 1.05;
+}
+
+.accent {
+  display: block;
+  color: var(--color-blue-500);
+}
+
+.lead {
+  max-width: 34ch;
+  margin-top: var(--sp-4);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  line-height: 1.4;
+}
+
+.cta {
+  width: 100%;
+  margin-top: var(--sp-5);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    display: block;
+    min-height: 440px;
+  }
+
+  .sceneWrap {
+    position: absolute;
+    inset: 0;
+    height: auto;
+    order: 0;
+  }
+
+  .robot {
+    left: auto;
+    right: 30%;
+    bottom: 16%;
+    width: min(26vw, 270px);
+    transform: none;
+  }
+
+  .content {
+    max-width: 50%;
+    padding: var(--sp-8) var(--sp-7);
+  }
+
+  .cta {
+    width: auto;
+  }
+}
+
+.features {
+  display: grid;
+  gap: var(--sp-3);
+  margin-top: var(--sp-4);
+  grid-template-columns: 1fr;
+  padding: var(--sp-2);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  min-height: 56px;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-sm);
+  font-weight: var(--fw-bold);
+}
+
+.feature:hover {
+  background: var(--color-offwhite);
+}
+
+.featureBadge {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .features {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-4);
+    padding: 0;
+    background: transparent;
+    border: 0;
+  }
+
+  .feature {
+    flex-direction: column;
+    justify-content: center;
+    min-height: 124px;
+    padding: var(--sp-5) var(--sp-3);
+    text-align: center;
+    background: var(--color-white);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+  }
+
+  .featureBadge {
+    width: 48px;
+    height: 48px;
+  }
+}

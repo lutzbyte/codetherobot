@@ -1,0 +1,145 @@
+import type { LevelDef } from "@/engine/types";
+
+/**
+ * Level tutorial Fase 5: satu level per mekanik.
+ * Buka lewat /play/2-1 sampai /play/5-2. Level asli (75) dibuat di Fase 6.
+ */
+export const TUTORIAL_LEVELS: Record<string, LevelDef> = {
+  "2-1": {
+    id: "2-1",
+    name: "Loops",
+    rows: ["gggggggg", "pppppppp", "gggggggg"],
+    start: { r: 1, c: 0 },
+    startDir: 1,
+    goal: { r: 1, c: 7 },
+    objects: [
+      { id: "tree-1", kind: "tree", at: { r: 0, c: 1 } },
+      { id: "tree-2", kind: "tree", at: { r: 0, c: 5 } },
+      { id: "stone-1", kind: "stone", at: { r: 2, c: 2 } },
+      { id: "crate-1", kind: "crate", at: { r: 2, c: 6 } },
+    ],
+    parCommands: 2,
+    maxInstructions: 4,
+    allowedCommands: ["move", "left", "right", "repeat"],
+    tutorial:
+      "Repeat runs the blocks inside it several times. The flag is 7 tiles away, but you only have a few blocks. Use Repeat.",
+  },
+  "2-2": {
+    id: "2-2",
+    name: "Nested Loops",
+    rows: ["pppp", ".ggp", ".ggp", "pppp"],
+    start: { r: 0, c: 0 },
+    startDir: 1,
+    goal: { r: 3, c: 0 },
+    objects: [
+      { id: "tree-1", kind: "tree", at: { r: 1, c: 1 } },
+      { id: "crate-1", kind: "crate", at: { r: 1, c: 2 } },
+      { id: "stone-1", kind: "stone", at: { r: 2, c: 2 } },
+    ],
+    parCommands: 4,
+    maxInstructions: 6,
+    allowedCommands: ["move", "left", "right", "repeat"],
+    tutorial:
+      "A Repeat can hold another Repeat. Walk around the garden: every side has the same length.",
+  },
+  "3-1": {
+    id: "3-1",
+    name: "Follow the Path",
+    rows: ["pppp", "...p", ".ppp"],
+    start: { r: 0, c: 0 },
+    startDir: 1,
+    goal: { r: 2, c: 1 },
+    objects: [],
+    parCommands: 4,
+    maxInstructions: 6,
+    allowedCommands: ["move", "left", "right", "repeat", "if"],
+    tutorial:
+      "If checks a sensor. If there is a path ahead, move forward. Otherwise turn right. Put the If inside a Repeat.",
+  },
+  "3-2": {
+    id: "3-2",
+    name: "Else and Nested Choices",
+    rows: ["ppp.p", "..p.p", "..ppp"],
+    start: { r: 0, c: 0 },
+    startDir: 1,
+    goal: { r: 0, c: 4 },
+    objects: [],
+    parCommands: 6,
+    maxInstructions: 8,
+    allowedCommands: ["move", "left", "right", "repeat", "if"],
+    tutorial:
+      "Else runs when the condition is false. This path turns both ways: put an If inside an Else to choose between right and left.",
+  },
+  "4-1": {
+    id: "4-1",
+    name: "Functions",
+    rows: [
+      "pppp...",
+      "...p...",
+      "...p...",
+      "...pppp",
+      "......p",
+      "......p",
+      "......p",
+    ],
+    start: { r: 0, c: 0 },
+    startDir: 1,
+    goal: { r: 6, c: 6 },
+    objects: [],
+    parCommands: 10,
+    maxInstructions: 11,
+    allowedCommands: ["move", "left", "right", "call"],
+    functions: ["f1"],
+    tutorial:
+      "Functions are reusable blocks. Put 3 forward moves in Function A, then call it for every straight segment.",
+  },
+  "4-2": {
+    id: "4-2",
+    name: "Parameters",
+    rows: ["ppp....", "..p....", "..p....", "..ppppp"],
+    start: { r: 0, c: 0 },
+    startDir: 1,
+    goal: { r: 3, c: 6 },
+    objects: [],
+    parCommands: 7,
+    maxInstructions: 7,
+    allowedCommands: ["move", "left", "right", "repeat", "call"],
+    functions: ["f1"],
+    tutorial:
+      "A parameter changes how a function works. Add the value n to Function A and repeat n times. The segments are 2, 3 and 4 tiles long.",
+  },
+  "5-1": {
+    id: "5-1",
+    name: "Variables",
+    rows: ["......", ".p....", ".p....", ".p.pp.", ".p..p.", ".pppp."],
+    start: { r: 3, c: 3 },
+    startDir: 1,
+    goal: { r: 1, c: 1 },
+    objects: [],
+    parCommands: 6,
+    maxInstructions: 7,
+    allowedCommands: ["move", "right", "repeat", "set"],
+    variables: ["size"],
+    tutorial:
+      "Variables remember numbers. The spiral grows by one tile each side: set size to 1, then make it bigger after every turn.",
+  },
+  "5-2": {
+    id: "5-2",
+    name: "While and Gates",
+    rows: ["ggggggg", "ppppppp", "ggggggg"],
+    start: { r: 1, c: 0 },
+    startDir: 1,
+    goal: { r: 1, c: 6 },
+    objects: [
+      { id: "switch-1", kind: "switch", at: { r: 1, c: 3 }, linkedTo: "gate-1" },
+      { id: "gate-1", kind: "gate", at: { r: 1, c: 5 } },
+      { id: "tree-1", kind: "tree", at: { r: 0, c: 2 } },
+      { id: "stone-1", kind: "stone", at: { r: 2, c: 4 } },
+    ],
+    parCommands: 5,
+    maxInstructions: 6,
+    allowedCommands: ["move", "interact", "while"],
+    tutorial:
+      "While repeats as long as its condition is true. Combine conditions with and / or: walk until you stand on the switch, press it, then walk on.",
+  },
+};

@@ -1,0 +1,82 @@
+:root {
+  /* Brand */
+  --color-navy-900: #121a33;
+  --color-navy-800: #16213e;
+  --color-navy-700: #1f2d52;
+  --color-navy-600: #2a3b68;
+  --color-blue-500: #2f6bdb;
+  --color-blue-400: #4a86f0;
+  --color-yellow-500: #ffc21a;
+  --color-yellow-600: #f0a800;
+  --color-green-500: #3fb950;
+  --color-purple-500: #7a5af8;
+  --color-orange-500: #f5882a;
+
+  /* Neutral */
+  --color-white: #ffffff;
+  --color-offwhite: #f4f6fc;
+  --color-ink-900: #111827;
+  --color-ink-600: #4b5563;
+  --color-ink-400: #9ca3af;
+  --color-border-light: #e3e8f4;
+  --color-border-dark: rgba(255, 255, 255, 0.1);
+
+  /* Semantic */
+  --bg-app: var(--color-offwhite);
+  --bg-panel-dark: var(--color-navy-800);
+  --text-on-light: var(--color-ink-900);
+  --text-on-dark: #f3f6ff;
+  --text-muted-dark: #a9b6d6;
+
+  /* Typography */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: clamp(2rem, 5vw, 3.5rem);
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  /* Spacing (4px base) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  /* Radius, shadow */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+  --shadow-card: 0 2px 8px rgba(18, 26, 51, 0.1);
+  --shadow-button: 0 3px 0 rgba(0, 0, 0, 0.18);
+
+  /* Layout */
+  --nav-h: 64px;
+  --bottom-nav-h: 64px;
+  --content-max: 1200px;
+
+  /* Motion */
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+  }
+}
+
+/* Breakpoints (untuk referensi; CSS tidak mendukung var di @media):
+   mobile  : < 768px
+   tablet  : 768px - 1023px
+   desktop : >= 1024px */

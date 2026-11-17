@@ -1,0 +1,36 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(56px + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) var(--sp-3) 0 var(--sp-4);
+  background: var(--color-navy-800);
+  color: var(--text-on-dark);
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: none;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.text {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-black);
+  line-height: 1.1;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+}

@@ -1,0 +1,49 @@
+.root {
+  position: relative;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+  background: var(--color-orange-500);
+}
+
+.hamburger {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-on-dark);
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 30;
+  min-width: 200px;
+  padding: var(--sp-2);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  box-shadow: 0 8px 24px rgba(18, 26, 51, 0.25);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--sp-4);
+  border-radius: var(--radius-sm);
+  color: var(--text-on-light);
+  font-weight: var(--fw-bold);
+}
+
+.item:hover {
+  background: var(--color-offwhite);
+}

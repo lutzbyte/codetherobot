@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /play/
+Disallow: /complete
+Disallow: /challenge/
+
+User-agent: Mediapartners-Google
+Allow: /
+
+Sitemap: http://localhost:5173/sitemap.xml

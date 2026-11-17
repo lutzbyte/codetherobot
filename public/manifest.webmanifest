@@ -1,0 +1,20 @@
+{
+  "name": "Code the Robot",
+  "short_name": "Code Robot",
+  "description": "A free programming puzzle game. Think. Code. Execute.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#16213e",
+  "theme_color": "#16213e",
+  "categories": ["games", "education"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

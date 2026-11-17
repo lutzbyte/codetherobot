@@ -1,0 +1,31 @@
+{
+  "name": "code-the-robot",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "typecheck": "tsc -b --noEmit",
+    "test": "bun test",
+    "seo": "bun scripts/generate-seo.ts",
+    "prerender": "bun scripts/prerender.ts",
+    "build": "bun run seo && tsc -b && vite build && bun run prerender",
+    "release:check": "bun scripts/release-check.ts",
+    "preview": "vite preview --host"
+},
+  "dependencies": {
+    "phaser": "^4.2.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "typescript": "^6",
+    "vite": "^8.3.8"
+  }
+}

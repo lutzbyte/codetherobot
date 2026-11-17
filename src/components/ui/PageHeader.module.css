@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.back {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-navy-800);
+  color: var(--text-on-dark);
+}
+
+.title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-black);
+  line-height: 1.15;
+}
+
+.subtitle {
+  margin-top: 2px;
+  color: var(--color-ink-600);
+  font-size: var(--fs-sm);
+}

@@ -1,0 +1,30 @@
+.toggle {
+  position: relative;
+  flex: 0 0 auto;
+  width: 56px;
+  height: 32px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: #c5cde0;
+  transition: background var(--dur-base) ease;
+}
+
+.on {
+  background: var(--color-green-500);
+}
+
+.knob {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform var(--dur-base) ease;
+}
+
+.on .knob {
+  transform: translateX(24px);
+}
